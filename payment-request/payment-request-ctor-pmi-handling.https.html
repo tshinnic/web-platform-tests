@@ -42,9 +42,13 @@ test(() => {
     },
     {
       supportedMethods: "¡basic-*-card!",
-    }, {
+    }, 
+    {
       supportedMethods: "not-actually-https://foo.com:/pay",
     },
+    {
+      supportedMethods: "Basic-Card",
+    }
   ];
   for (const invalidMethod of invalidMethods) {
     assert_throws(
